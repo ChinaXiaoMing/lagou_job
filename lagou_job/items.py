@@ -11,6 +11,7 @@ import scrapy
 class LagouJobItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
+    page_no = scrapy.Field
     position_name = scrapy.Field
     salary = scrapy.Field
     city = scrapy.Field

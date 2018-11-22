@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50721
 File Encoding         : 65001
 
-Date: 2018-11-15 19:17:48
+Date: 2018-11-22 17:57:02
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -36,6 +36,7 @@ CREATE TABLE `jobs` (
 DROP TABLE IF EXISTS `lagou_job`;
 CREATE TABLE `lagou_job` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT '主键ID',
+  `page_no` int(20) DEFAULT NULL COMMENT '页数',
   `position_name` varchar(64) NOT NULL COMMENT '职位名称',
   `salary` varchar(64) DEFAULT NULL,
   `city` varchar(64) DEFAULT NULL COMMENT '城市',
@@ -52,9 +53,10 @@ CREATE TABLE `lagou_job` (
   `company_advantage` varchar(255) DEFAULT NULL COMMENT '公司福利',
   `first_type` varchar(255) DEFAULT NULL COMMENT '招聘类型',
   `create_time` varchar(64) DEFAULT NULL COMMENT '发布日期',
-  `gmt_create` datetime DEFAULT NULL COMMENT '创建时间',
+  `gmt_create` datetime NOT NULL COMMENT '创建时间',
+  `gmt_modified` datetime DEFAULT NULL COMMENT '修改时间',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=1321 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for titles
